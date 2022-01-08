@@ -82,7 +82,7 @@ class ImageDataset:
 
     @classmethod
     def _read_img(cls, filename: str) -> np.ndarray:
-        """ read image from .pgm file """
+        """read image from .pgm file"""
         with open(filename, "rb") as pgmf:
             im = plt.imread(pgmf) / 255.0
         return np.expand_dims(im, axis=0)
